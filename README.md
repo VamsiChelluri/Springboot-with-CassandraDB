@@ -13,7 +13,7 @@ Download and install the following.
 ## Project Structure
 
 ![image](https://user-images.githubusercontent.com/65802767/183461296-d3edf992-4088-44ba-9805-f65cb2abcd54.png "Project structure")
-* [`CassandraProjectApplication.java`](https://github.com/sucharithalk/springboot-core/blob/Springboot-Cassandra-CRUD/Cassandra-project-1/src/main/java/com/cassandra/CassandraProjectApplication.java) class is the Spring Boot application's main class that contains a public static void main() method that starts up the Spring ApplicationContext. 
+* [`CassandraProjectApplication.java`](https://github.com/VamsiChelluri/Springboot-with-CassandraDB/blob/master/src/main/java/com/cassandra/CassandraProjectApplication.java) class is the Spring Boot application's main class that contains a public static void main() method that starts up the Spring ApplicationContext. 
 By default, if the main class isn't explicitly specified, Spring will search for one in the classpath at compile time and fail to start if none or multiple of them are found.
 * The details of remaining classes will be discussed in later sections.
 
@@ -49,18 +49,18 @@ The attributes mentioned above are used by Spring Data to connect to the correct
 ## Create Data Model
 - The model class represents the table that we will store in Cassandra DB and perform CRUD operations.
 
-- Create a [`Customer`](https://github.com/sucharithalk/springboot-core/blob/Springboot-Cassandra-CRUD/Cassandra-project-1/src/main/java/com/cassandra/entity/Customer.java) class within the sub-package or in the same package of main class.
+- Create a [`Customer`](https://github.com/VamsiChelluri/Springboot-with-CassandraDB/blob/master/src/main/java/com/cassandra/entity/Customer.java) class within the sub-package or in the same package of main class.
 
 ## Create Repository Interface
 - In order to support DB operations, we will create a Repositroy interface which will extend CassandraRepository.
 
-- Create a [`CustomerRepository`](https://github.com/sucharithalk/springboot-core/blob/Springboot-Cassandra-CRUD/Cassandra-project-1/src/main/java/com/cassandra/repository/CustomerRepository.java) class within the sub-package or in the same package of main class.
+- Create a [`CustomerRepository`](https://github.com/VamsiChelluri/Springboot-with-CassandraDB/blob/master/src/main/java/com/cassandra/repository/CustomerRepository.java) class within the sub-package or in the same package of main class.
 
    - Here [*@AllowFiltering*](https://docs.spring.io/spring-data/cassandra/docs/current/reference/html/) annotation allows server-side filtering for `findByEmail()` method.
 ## Create Spring Rest APIs Controller
 - We will create a Rest Controller to expose 6 endpoints for basic CRUD operarions.
 
-- Create a [`CustomerController`](https://github.com/sucharithalk/springboot-core/blob/Springboot-Cassandra-CRUD/Cassandra-project-1/src/main/java/com/cassandra/controller/CustomerController.java) class within the sub-package or in the same package of main class.
+- Create a [`CustomerController`](https://github.com/VamsiChelluri/Springboot-with-CassandraDB/blob/master/src/main/java/com/cassandra/controller/CustomerController.java) class within the sub-package or in the same package of main class.
 
 - **CRUD Operations**
 
